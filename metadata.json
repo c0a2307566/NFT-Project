@@ -1,5 +1,1 @@
-{
-  "name": "My First VM NFT",
-  "description": "Created on Ubuntu VM",
-  "image": "ipfs://QmZet68CA2TRaSKrbS1Fy7fbtb7yrySbfSSJA9zwY7wacW"
-}
+{ "name": "My NFT", "image": "ipfs://QmWE5GwcGQo7epXJXW8uQP8JmQzpvC3yjfdDE1KYip7qBB" }
