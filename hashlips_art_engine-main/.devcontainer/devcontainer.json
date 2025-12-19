@@ -1,0 +1,6 @@
+{
+    "name": "Generative NFT",
+    "build": {
+        "dockerfile": "Dockerfile"
+    }
+}
