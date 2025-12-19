@@ -9,8 +9,22 @@ const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 // 画像フォルダ
 const ASSETS_DIR = path.join(__dirname, "../hashlips_art_engine-main/build/images");
 
-// 作者名（共通と仮定。個別にするならファイル名などから生成）
-const AUTHOR_NAME = "Taro Yamada";
+
+// 作者名を標準入力から取得
+const readline = require("readline");
+
+async function getAuthorName() {
+  const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+  });
+  return new Promise(resolve => {
+    rl.question("作者名を入力してください: ", answer => {
+      rl.close();
+      resolve(answer);
+    });
+  });
+}
 
 // IPFSアップロード関数（画像のみ使用）
 function uploadToIPFS(filePath) {
@@ -23,8 +37,12 @@ function uploadToIPFS(filePath) {
   }
 }
 
+
 async function main() {
   console.log("🤖 オンチェーン保存型NFTの発行を開始します...\n");
+
+  // 作者名を一度だけ入力
+  const AUTHOR_NAME = await getAuthorName();
 
   const MyNFT = await hre.ethers.getContractFactory("MyNFT");
   const nft = MyNFT.attach(CONTRACT_ADDRESS);

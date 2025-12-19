@@ -26,13 +26,15 @@ const layerConfigurations = [
   {
     growEditionSizeTo: 10,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "background" },
+      { name: "skin" },
+      { name: "face" },
+      { name: "hair" },
+      { name: "clothe" },
+      { name: "tatoo" },
+      { name: "earring" },
+      { name: "ga-ze"},
+      { name: "horn" },
     ],
   },
 ];
@@ -42,8 +44,8 @@ const shuffleLayerConfigurations = false;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 800,
+  height: 1000,
   smoothing: false,
 };
 
@@ -72,7 +74,7 @@ const pixelFormat = {
 };
 
 const background = {
-  generate: true,
+  generate: false,
   brightness: "80%",
   static: false,
   default: "#000000",
