@@ -5,10 +5,10 @@ const { execSync } = require("child_process");
 const readline = require("readline");
 
 // ★コントラクトアドレス
-const CONTRACT_ADDRESS = "0x922D6956C99E12DFeB3224DEA977D0939758A1Fe";
+const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
 // 画像フォルダ
-const ASSETS_DIR = path.join(__dirname, "../assets");
+const ASSETS_DIR = path.join(__dirname, "../hashlips_art_engine-main/build/images");
 
 // ユーザー入力を受け付けるための設定
 const rl = readline.createInterface({

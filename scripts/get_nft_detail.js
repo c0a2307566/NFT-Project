@@ -2,7 +2,7 @@ const hre = require("hardhat");
 const readline = require("readline");
 
 // ★コントラクトアドレス
-const CONTRACT_ADDRESS = "0x922D6956C99E12DFeB3224DEA977D0939758A1Fe";
+const CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
 
 // 入力受付の設定
 const rl = readline.createInterface({
